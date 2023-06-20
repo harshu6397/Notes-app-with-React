@@ -7,19 +7,7 @@ const Note = ({ id, text, time, color, deleteNote, updateNoteText }) => {
   useEffect(() => {
     setNoteText(text);
   }, [text]); 
-
-  const formatDate = (value) => {
-    const date = new Date(value);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    const day = date.getDate(); 
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    return `${hours}:${minutes}:${seconds} ${day}/${month}/${year}`;
-  }
-
+  
   return (
     <div
       className={`w-full h-96 flex flex-col justify-between dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 note`}
@@ -41,7 +29,7 @@ const Note = ({ id, text, time, color, deleteNote, updateNoteText }) => {
       ></textarea>
       <div className="px-4 py-2">
         <div className="flex items-center justify-between text-gray-800 dark:text-gray-100">
-          <p className="text-sm h-8 flex items-center">{formatDate(time)}</p>
+          <p className="text-sm h-8 flex items-center">{time}</p>
           <div className="note_delete_icon">
             <div
               className="w-8 h-8 rounded-full bg-gray-800 dark:bg-gray-100 dark:text-gray-800 text-white flex items-center justify-center cursor-pointer"

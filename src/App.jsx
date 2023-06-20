@@ -17,7 +17,9 @@ function App() {
     const newNote = {
       id: Date.now() + "" + Math.floor(Math.random() * 45),
       text: "",
-      time: Date.now(),
+      time: `${new Date().toDateString()} ${
+        new Date().toTimeString().split(" ")[0]
+      }`,
       color,
     };
 
