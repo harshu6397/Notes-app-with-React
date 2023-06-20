@@ -13,10 +13,18 @@ const NoteContainer = ({ notes, deleteNote, updateNoteText }) => {
   const reverseNotesArray = [...notes].reverse();
   return (
     <>
-      {reverseNotesArray.length === 0 && (
+      {reverseNotesArray.length === 0 && windowSize.width >= 768 && (
         <div className="flex justify-start items-center flex-col w-full h-full mt-[18px]">
           <img src={arrowImage} alt="arrow" />
           <h1 className="text-8xl font-bold text-gray-400">No Notes found</h1>
+          <p className="text-2xl font-bold text-gray-400">
+            Click on the + icon to add a note
+          </p>
+        </div>
+      )}
+      {reverseNotesArray.length === 0 && windowSize.width < 768 && (
+        <div className="flex justify-center items-center px-5 flex-col w-full h-full text-center">
+          <h1 className="text-5xl font-bold text-gray-400">No Notes found</h1>
           <p className="text-2xl font-bold text-gray-400">
             Click on the + icon to add a note
           </p>
