@@ -75,7 +75,7 @@ function App() {
       {windowSize.width >= 768 && (
         <div className="App flex flex-col px-10">
           <h1 className="text-5xl font-bold pt-5 h-[10vh]">Your Notes</h1>
-          <div className="App h-[90vh] flex justify-center">
+          <div className="App h-[90vh] flex">
             <Sidebar addNote={addNote} />
             <NoteContainer
               notes={notes}

@@ -13,7 +13,7 @@ const NoteContainer = ({ notes, deleteNote, updateNoteText }) => {
   return (
     <>
       {reverseNotesArray.length === 0 && windowSize.width >= 768 && (
-        <div className="flex justify-center items-center flex-col w-full h-full mp-[18px]">
+        <div className="flex justify-center items-center flex-col w-full h-full pt-[18px]">
           <h1 className="text-8xl font-bold text-gray-400 text-center">No Notes found</h1>
           <p className="text-2xl font-bold text-gray-400">
             Click on the + icon to add a note
@@ -49,8 +49,8 @@ const NoteContainer = ({ notes, deleteNote, updateNoteText }) => {
       )}
 
       {reverseNotesArray.length > 0 && windowSize.width >= 768 && (
-        <div className="container pb-20 pt-10 notes-container">
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 notes-container_notes custom-scrollbar">
+        <div className="pb-20 pt-10 notes-container">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 notes-container_notes custom-scrollbar">
             {reverseNotesArray?.map((note, index) => {
               return (
                 <Note
