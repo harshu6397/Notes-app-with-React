@@ -38,8 +38,8 @@ const Note = ({ id, text, time, color, deleteNote, updateNoteText }) => {
               }}
             >
               <svg
-                width="359"
-                height="362"
+                width="50"
+                height="50"
                 viewBox="0 0 359 362"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

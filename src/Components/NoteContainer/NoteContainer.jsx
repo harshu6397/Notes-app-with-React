@@ -1,6 +1,5 @@
 import "./NoteContainer.scss";
 import Note from "../Note/Note";
-import arrowImage from "../../assets/images/arrow.svg";
 
 import React from "react";
 import useWindowSize from "../../hooks/usewindowSize";
@@ -14,9 +13,8 @@ const NoteContainer = ({ notes, deleteNote, updateNoteText }) => {
   return (
     <>
       {reverseNotesArray.length === 0 && windowSize.width >= 768 && (
-        <div className="flex justify-start items-center flex-col w-full h-full mt-[18px]">
-          <img src={arrowImage} alt="arrow" />
-          <h1 className="text-8xl font-bold text-gray-400">No Notes found</h1>
+        <div className="flex justify-center items-center flex-col w-full h-full mp-[18px]">
+          <h1 className="text-8xl font-bold text-gray-400 text-center">No Notes found</h1>
           <p className="text-2xl font-bold text-gray-400">
             Click on the + icon to add a note
           </p>
@@ -24,7 +22,7 @@ const NoteContainer = ({ notes, deleteNote, updateNoteText }) => {
       )}
       {reverseNotesArray.length === 0 && windowSize.width < 768 && (
         <div className="flex justify-center items-center px-5 flex-col w-full h-full text-center">
-          <h1 className="text-5xl font-bold text-gray-400">No Notes found</h1>
+          <h1 className="text-5xl font-bold text-gray-400 text-center">No Notes found</h1>
           <p className="text-2xl font-bold text-gray-400">
             Click on the + icon to add a note
           </p>
