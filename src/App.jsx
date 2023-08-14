@@ -62,7 +62,7 @@ function App() {
       {windowSize.width < 768 && (
         <div className="flex justify-center items-center flex-col w-full">
           <h1 className="text-5xl font-bold my-8">Your Notes</h1>
-          <div className="App w-full h-[80vh] flex justify-center">
+          <div className="App w-full h-[100vh] flex justify-center">
             <NoteContainer
               notes={notes}
               deleteNote={deleteNote}
@@ -74,8 +74,8 @@ function App() {
       )}
       {windowSize.width >= 768 && (
         <div className="App flex flex-col px-10">
-          <h1 className="text-5xl font-bold mt-8">Your Notes</h1>
-          <div className="App h-[100vh] flex justify-center">
+          <h1 className="text-5xl font-bold mt-8 h-[10vh]">Your Notes</h1>
+          <div className="App h-[90vh] flex justify-center">
             <Sidebar addNote={addNote} />
             <NoteContainer
               notes={notes}

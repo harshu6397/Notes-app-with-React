@@ -14,7 +14,7 @@ const Sidebar = ({ addNote }) => {
   return (
     <>
       {windowSize.width < 768 && (
-        <div className="sidebar mx-auto container pt-10 flex flex-col items-center">
+        <div className="sidebar mx-auto container flex flex-col items-center">
           <div className="sidebar_list_container">
             <ul
               className={`sidebar_list ${

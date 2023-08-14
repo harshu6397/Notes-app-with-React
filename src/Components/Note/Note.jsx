@@ -10,13 +10,13 @@ const Note = ({ id, text, time, color, deleteNote, updateNoteText }) => {
   
   return (
     <div
-      className={`w-full h-96 flex flex-col justify-between dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 note`}
+      className={`w-full h-96 flex flex-col justify-between rounded-lg borde note shadow-sm`}
       style={{
         backgroundColor: color.includes("#") ? color.toLowerCase() : color,
       }}
     >
       <textarea
-        className="peer block min-h-[auto] w-full h-[90%] rounded bg-transparent px-4 py-[0.48rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 note_text"
+        className="block min-h-[auto] w-full h-[90%] rounded bg-transparent px-4 py-[0.48rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 note_text"
         id="exampleFormControlTextarea1"
         rows="3"
         value={noteText}
